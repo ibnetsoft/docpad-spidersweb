@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Docpad-spidersweb : markquery skeleton - spider's web for docpad" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Docpad-spidersweb</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/markquery/docpad-spidersweb">View on GitHub</a>
+
+          <h1 id="project_title">Docpad-spidersweb</h1>
+          <h2 id="project_tagline">markquery skeleton - spider's web for docpad</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/markquery/docpad-spidersweb/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/markquery/docpad-spidersweb/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="markquery-skeleton" class="anchor" href="#markquery-skeleton"><span class="octicon octicon-link"></span></a><a href="http://markquery.github.io">MARKQUERY SKELETON</a>
+</h1>
+
+<h2>
+<a name="spiders-web-v100-for-docpad" class="anchor" href="#spiders-web-v100-for-docpad"><span class="octicon octicon-link"></span></a>Spider's Web v1.0.0 for docpad</h2>
+
+<p>Customize your contents. Markquery is markup library for web contents.</p>
+
+<ul>
+<li>Homepage <a href="http://markquery.github.io">http://markquery.github.io</a>
+</li>
+<li>Korean page: <a href="http://markquery.kr">http://markquery.kr</a>
+</li>
+<li>Twitter: <a href="http://twitter.com/markquery">@markquery</a>
+</li>
+</ul><h3>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h3>
+
+<ol>
+<li><p><a href="https://github.com/bevry/docpad">Install DocPad</a></p></li>
+<li>
+<p>Clone the project and run the server</p>
+
+<div class="highlight"><pre>git clone https://github.com/markquery/docpad-spidersweb.git
+<span class="nb">cd </span>docpad-spidersweb
+npm install
+docpad run
+</pre></div>
+</li>
+<li><p><a href="http://localhost:9778/">Open http://localhost:9778/</a></p></li>
+<li><p>Start hacking away by modifying the <code>src</code> directory</p></li>
+</ol><h3>
+<a name="im-getting-emfile-errors" class="anchor" href="#im-getting-emfile-errors"><span class="octicon octicon-link"></span></a>I'm getting EMFILE errors</h3>
+
+<p><a href="http://docpad.org/docs/troubleshoot#i-m-getting-emfile-too-many-open-files">See here for the reason why and the solution</a></p>
+
+<h3>
+<a name="file-structure" class="anchor" href="#file-structure"><span class="octicon octicon-link"></span></a>File structure</h3>
+
+<pre><code>docpad-spidersweb/
+├── docpad.coffee
+├── history.md
+├── LICENSE.md
+├── package.json
+├── README.md
+├── node_modules/ (plugins) 
+├── out/ (output directory) 
+└── src/ 
+    ├── *documents/
+        ├── 404.html.eco
+        ├── 500.html. eco
+        ├── atom.xml.coffee
+        └── index.html
+    ├── *files/
+        ├── images/
+        ├── scripts/
+        └── style/
+            ├── crossdomain.xml
+            ├── humans.txt
+            └── robots.txt
+    ├── layouts/
+        ├── default.html.eco
+        ├── page.html.eco
+        └── post.html.eco
+    └── partials/
+        └──footer.html
+
+*files/
+└── images/
+    ├── apple-touch-icon.png
+    ├── apple-touch-icon-57x57-precomposed.png
+    ├── apple-touch-icon-72x72-precomposed.png
+    ├── apple-touch-icon-114x114-precomposed.png
+    ├── apple-touch-icon-144x144-precomposed.png
+    ├── docs-icon-64.png
+    ├── favicon.ico
+    ├── fontsize-d.png
+    ├── fontsize-minus.png
+    ├── fontsize-plus.png
+    ├── footer.png
+    ├── github-icon-64.png
+    ├── glyphicons-halflings.png
+    ├── glyphicons-halflings-white.png
+    ├── hollys.png
+    ├── markquery-icon-64
+    ├── markquery-slide.png
+    ├── status-icon-64
+    └── topscroll-icon
+└── scripts/
+    ├── bootstrap-v2.js
+    ├── fontsize.js
+    ├── jquery-version.min.js
+    ├── modernizr-version.min.js
+    ├── prettify.js
+    └── rss.js
+└── styles/
+    ├── bootstrap-v2.min.css
+    ├── main.css (site design css file)
+    └── prettify.css
+
+*document/
+    ├── scritps/script.js.coffee
+    └── styles/markquery.css (user css file, http://markquery.github.io/reference)
+</code></pre>
+
+<h3>
+<a name="versioning" class="anchor" href="#versioning"><span class="octicon octicon-link"></span></a>Versioning</h3>
+
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></p>
+
+<h3>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
+
+<ul>
+<li>Supports <a href="https://github.com/twitter/bootstrap">bootstrap v2.x</a> and bootstpra 3 mobile first.</li>
+<li>The latest <a href="http://jquery.com/">jQuery</a> via CDN, with a local fallback.</li>
+<li>The latest <a href="http://modernizr.com/">Modernizr</a> build for feature detection.</li>
+<li>Includes <a href="http://html5boilerplate.com/">HTML5 Boilerplate</a>
+</li>
+<li>Includes <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> </li>
+<li>Includes <a href="http://microformats.org/">microformat</a>
+</li>
+<li>Includes <a href="http://humanstxt.org/">humans.txt</a>
+</li>
+<li><a href="https://github.com/css/csso">CSSO</a></li>
+<li><a href="http://lesscss.org/">less</a></li>
+<li><a href="https://github.com/bevry/docpad">docpad</a></li>
+<li><a href="https://github.com/joyent/node">nodejs</a></li>
+<li>
+<a href="https://github.com/retlehs/roots">roots</a> theme for wordpress</li>
+<li>more...</li>
+</ul><h3>
+<a name="previews" class="anchor" href="#previews"><span class="octicon octicon-link"></span></a>Previews</h3>
+
+<ul>
+<li>
+<code>DocPad</code> <strong>Spider's Web</strong> for docpad - <a href="http://markquery.github.io/docpad-spidersweb">preview</a>
+</li>
+<li>
+<code>DocPad</code> <strong>Doo Be Doo</strong> for docpad - <a href="http://markquery.github.io/docpad-doobedoo">preview</a>
+</li>
+<li>
+<code>Tistory</code> <strong>Spider's Web</strong> for tistory - <a href="http://markquery-spidersweb.tistory.com">preview</a>
+</li>
+<li>
+<code>Tistory</code> <strong>Doo Be Doo</strong> for tistory - <a href="http://markquery-doobedoo.tistory.com">preview</a>
+</li>
+</ul><h3>
+<a name="all-sources" class="anchor" href="#all-sources"><span class="octicon octicon-link"></span></a>All sources</h3>
+
+<ul>
+<li>
+<code>WordPress</code> Spider's Web - centered layout <a href="https://github.com/markquery/wp-spidersweb">source</a>
+</li>
+<li>
+<code>DocPad</code> Spider's web - centered layout <a href="https://github.com/markquery/docpad-spidersweb">source</a>
+</li>
+<li>
+<code>DocPad</code> Doo Be Doo - fullscreen layout <a href="https://github.com/markquery/docpad-doobedoo">source</a>
+</li>
+<li>
+<code>Tistory</code> Spider's web - centered layout <a href="https://github.com/markquery/tistory-spidersweb">source</a> (Korean only)</li>
+<li>
+<code>Tistory</code> Doo Be Doo - fullscreen layout <a href="https://github.com/markquery/docpad-doobedoo">source</a> (Korean only)</li>
+</ul><h3>
+<a name="skeleton-license" class="anchor" href="#skeleton-license"><span class="octicon octicon-link"></span></a>Skeleton License</h3>
+
+<p>This skeleton is made <a href="http://en.wikipedia.org/wiki/Public_domain">"public domain"</a> using the <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a>, as such before you publish your website you should place your desired license here and within the <code>LICENSE.md</code> file.</p>
+
+<p>If you are wanting to open-source your website, we suggest using the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> for content and the <a href="http://creativecommons.org/licenses/MIT/">MIT License</a> for code. In which case you'd probably want to use the following as your license:</p>
+
+<pre><code>Unless stated otherwise, all content is licensed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/) and code licensed under the [MIT License](http://creativecommons.org/licenses/MIT/), © [Your Name](http://your.website)
+</code></pre>
+
+<p>If you are wanting to close-source your website, we'd suggest using the following:</p>
+
+<pre><code>Copyright [Your Name](http://your.website). All rights reserved.
+</code></pre>
+
+<p>Other included things such as themes and libraries are likely already licensed by their own invidual licenses, so be sure to respect their licenses too.</p>
+
+<h3>
+<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>submit your contents and needs your help!</p>
+
+<ul>
+<li>GitHub : <a href="https://github.com/markquery">http://github.com/markquery</a>
+</li>
+<li>email : <a href="mailto:ungki.h@gmail.com">ungki.h@gmail.com</a>
+</li>
+<li>twitter : <a href="https://twitter.com/markquery">@markquery</a>
+</li>
+</ul><h3>
+<a name="copyright-and-license" class="anchor" href="#copyright-and-license"><span class="octicon octicon-link"></span></a>Copyright and License</h3>
+
+<ul>
+<li>Copyright 2013 markquery project maintained by Ungki, H</li>
+<li>Licensed under the incredibly permissive <a href="http://markquery.github.io/license">MIT License</a>
+</li>
+<li>Documentations under <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a>
+</li>
+<li>Open sources are copyright of their respective owners</li>
+</ul><p>Thanks.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Docpad-spidersweb maintained by <a href="https://github.com/markquery">markquery</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
