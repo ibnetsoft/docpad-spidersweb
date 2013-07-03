@@ -1,0 +1,12 @@
+---
+title: Posts
+layout: page
+pageOrder: 2
+---
+<ul class="mobile-wrap">
+	<% for document in @getCollection('posts').toJSON(): %>
+		<li><span><%= document.date.toDateString() %></span>
+		&raquo;
+		<a href="<%= document.url %>"><%= document.title %></a></li>
+	<% end %>
+</ul>

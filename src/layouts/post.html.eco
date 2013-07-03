@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<!-- Entry : atricle-header
+================================================== -->      
+<header class="article-header">
+	<h1 class="text-size-18 ahover-111-555"><%= @document.title %></h1>
+	<time class="mobile-wrap" datetime="<%= @document.date %>"><%= @document.date %></time>
+	<p>Posted in <a class="ahover-cfcfd5-666" href="#none"><strong>category</strong></a> by <%= @site.author %></p>
+</header>
+
+
+<%- @content %>
+
+<section>
+	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
+	<div id="related">
+		<h3 class="text-size-12 ahover-111-555">Related Posts</h3>
+		<ul class="mobile-wrap">
+			<% for document in @document.relatedDocuments: %>
+				<li><span><%= document.date.toDateString() %></span>
+				&raquo;
+				<a href="<%= document.url %>"><%= document.title %></a></li>
+			<% end %>
+		</ul>
+	</div>
+	<% end %>
+</section>
+
+<!-- Entry : article-footer -->
+<div class="article-footer">
+
+<!-- Entry : article-footer : actionTrail
+================================================== -->
+<div class="actionTrail">
+<section class="nestedhover-111-555">
+	<p><i class="icon-leaf"></i> closed trackback</a> <span class="cnt">0</span> : <i class="icon-comment"></i> closed comment <span class="cnt"> 0</span> 
+	</p>
+</section>
+</div>
+
+</div>
+
