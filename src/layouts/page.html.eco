@@ -3,11 +3,13 @@ layout: default
 ---
 <!-- Entry : atricle-header
 ================================================== -->      
-<header class="article-header">
+<header class="entry-title">
 	<h1 class="text-size-18 ahover-111-555"><%= @document.title %></h1>
 </header>
 
 
+<div class="entry-content">
 <%- @content %>
+</div>
 
 

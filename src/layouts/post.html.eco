@@ -3,14 +3,15 @@ layout: default
 ---
 <!-- Entry : atricle-header
 ================================================== -->      
-<header class="article-header">
+<header class="entry-title">
 	<h1 class="text-size-18 ahover-111-555"><%= @document.title %></h1>
 	<time class="mobile-wrap" datetime="<%= @document.date %>"><%= @document.date %></time>
-	<p>Posted in <a class="ahover-cfcfd5-666" href="#none"><strong>category</strong></a> by <%= @site.author %></p>
+	<p>Posted in <a class="ahover-cfcfd5-666" href="#none"><strong>category</strong></a> by <span class="byline"><%= @site.author %></span></p>
 </header>
 
-
+<div class="entry-content">
 <%- @content %>
+</div>
 
 <section>
 	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
@@ -28,7 +29,7 @@ layout: default
 </section>
 
 <!-- Entry : article-footer -->
-<div class="article-footer">
+<div class="entry-footer">
 
 <!-- Entry : article-footer : actionTrail
 ================================================== -->
