@@ -43,7 +43,7 @@ docpadConfig = {
 
 			# Styles
 			styles: [
-				"/styles/bootstrap-v2.min.css"
+				"/styles/bootstrap.css"
 				"/styles/main.css"
 				"/styles/markquery.css"
 				"/styles/prettify.css"
@@ -52,7 +52,7 @@ docpadConfig = {
 			# Scripts
 			scripts: [
 				"//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
-				"/scripts/bootstrap-v2.js"
+				"/scripts/bootstrap.js"
 				"/scripts/modernizr-2.6.2.min.js"
 				"/scripts/script.js"
 				"/scripts/rss.js"
