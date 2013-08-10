@@ -1,13 +1,13 @@
 {
   "name": "docpad-spidersweb",
-  "version": "0.0.1",
-  "description": "markquery skeleton - spider's web for docpad ",
+  "version": "1.0.0",
+  "description": "spider's web - markquery skeleton for docpad ",
   "homepage": "https://github.com/markquery/docpad-spidersweb",
   "keywords": [
     "markquery-skeleton",
     "docpad",
     "website",
-    "bootstrap",
+    "bootstrap3",
     "contents editorial design"
   ],
   "author": "Ungki, H <ungki.h@gmail.com> (http://markquery.github.io)",
@@ -40,7 +40,6 @@
     "docpad-plugin-partials": "2.x",
     "docpad-plugin-related": "2.x",
     "docpad-plugin-text": "2.x",
-    "docpad-plugin-handlebars": "~2.2.2"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"

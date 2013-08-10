@@ -31,7 +31,7 @@ $ ->
 	  btnPlusClasseId: "#jfontsize-p"
 
 	jQuery ($) ->
-	  $(".widget-feed").rss "http://rach02.tistory.com/rss",
+	  $(".widget-feed").rss "http://markquery.com/feed",
 	    limit: 5
 	    effect: "slideFast"
 	    layoutTemplate: "<ul class=\"media-list\">{entries}</ul>"
