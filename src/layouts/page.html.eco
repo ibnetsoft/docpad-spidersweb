@@ -1,15 +1,12 @@
 ---
 layout: default
----
-<!-- Entry : atricle-header
-================================================== -->      
-<header class="entry-title">
-	<h1 class="text-size-18 ahover-111-555"><%= @document.title %></h1>
+---     
+<header class="entry-header">
+	<h1 class="entry-title"><%= @document.title %></h1>
 </header>
 
-
 <div class="entry-content">
-<%- @content %>
+	<%- @content %>
 </div>
 
 

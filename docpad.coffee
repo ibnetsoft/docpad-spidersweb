@@ -12,20 +12,19 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://markquery.github.io"
+			url: "http://markquery.com"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
-				'www.website.com',
-				'website.herokuapp.com'
+				'www.markquery.com'
 			]
 
 			# The default title of our website
-			title: "Spider's Web Preview for DocPad "
+			title: "MARKQUERY FOR DOCPAD"
 
 			# The website description (for SEO)
 			description: """
-				site description here
+				Site Description here
 				"""
 
 			# The website keywords (for SEO) separated by commas
@@ -34,7 +33,7 @@ docpadConfig = {
 				"""
 
 			# The website author's name
-			author: "Your Name"
+			author: "Ungki, H"
 
 			# The website author's email
 			email: "your@email.com"
@@ -43,21 +42,19 @@ docpadConfig = {
 
 			# Styles
 			styles: [
-				"/styles/bootstrap-v2.min.css"
+				"/styles/bootstrap.css"
 				"/styles/main.css"
 				"/styles/markquery.css"
-				"/styles/prettify.css"
 			]
 
 			# Scripts
 			scripts: [
 				"//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
-				"/scripts/bootstrap-v2.js"
 				"/scripts/modernizr-2.6.2.min.js"
+				"/scripts/bootstrap.js"
 				"/scripts/script.js"
-				"/scripts/rss.js"
 				"/scripts/fontsize.js"
-				"/scripts/prettify.js"
+				"/scripts/rss.js"
 			]
 
 		# -----------------------------
@@ -95,7 +92,6 @@ docpadConfig = {
 
 		posts: (database) ->
 			database.findAllLive({tags:$has:'post'}, [date:-1])
-
 
 	# =================================
 	# Plugins

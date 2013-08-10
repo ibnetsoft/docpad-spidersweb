@@ -1,44 +1,64 @@
 ---
 layout: default
 ---
-<!-- Entry : atricle-header
-================================================== -->      
-<header class="entry-title">
-	<h1 class="text-size-18 ahover-111-555"><%= @document.title %></h1>
-	<time class="mobile-wrap" datetime="<%= @document.date %>"><%= @document.date %></time>
-	<p>Posted in <a class="ahover-cfcfd5-666" href="#none"><strong>category</strong></a> by <span class="byline"><%= @site.author %></span></p>
+<header class="entry-header">
+<div class="row"> 
+<div class="col-lg-10 col-sm-10">
+	<h1 class="entry-title"><%= @document.title %></h1>
+	<!-- <h2 class="entry-summary"> the_excerpt </h2> -->
+	<time class="published" datetime="<%= @document.date %>"><%= @document.date %></time>
+</div>
+</div>
+<div class="row"> 
+<div class="col-lg-9 col-sm-9">
+	<p class="byline author vcard">Posted in category by <span class="fn"><%= @site.author %></span></p>
+</div>
+
+<div class="col-lg-3 col-sm-3">
+	<div class="responsive-right2left">
+	<div class="btn-group">
+		<button id="jfontsize-p" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+		<button id="jfontsize-m" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+		<div class="btn-group">
+			<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">FONT <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+			  	<li><a href="javascript:changeFontFamily('Arial, Helvetica, sans-serif');">Arial</a></li>
+			  	<li><a href="javascript:changeFontFamily('Georgia, serif');">Georgia</a></li>
+			  	<li><a href="javascript:changeFontFamily('Times New Roman, Times, serif');">Times</a><li>
+			  	<li><a href="javascript:changeFontFamily('Comic Sans MS, cursive, sans-serif');">Comic Sans MS</a></li>
+			  	<li><a href="javascript:changeFontFamily('Lucida Console, Monaco, monospace');">Lucida Console</a></li>
+			  	<li><a href="javascript:changeFontFamily('Courier New, Courier, monospace');">Courier New</a></li>
+				<li><a href="javascript:changeFontFamily('굴림, Gulim, sans-serif');">굴림</a></li>
+				<li><a href="javascript:changeFontFamily('돋움, dotum, sans-serif');">돋움</a></li>
+				<li><a href="javascript:changeFontFamily('바탕, Batang, sans-serif');">바탕</a></li>
+				<li><a href="javascript:changeFontFamily('맑은 고딕, Malgun Gothic, sans-serif');">맑은고딕</a></li>
+				<li><a href="javascript:changeFontFamily('나눔고딕, NanumGothic, sans-serif');">나눔고딕</a></li>
+				<li><a href="javascript:changeFontFamily('다음_Regular, daum_Regular, sans-serif');">다음</a></li>
+				<li class="divider"></li>
+				<li><a href="http://markquery.com/">Web Safe Font <span class="glyphicon glyphicon-question-sign"></span></a></li>
+			</ul>
+		</div><!-- /.btn-group -->
+	</div><!-- /.btn-group -->
+	</div><!-- /.responsive-right2left -->
+</div><!-- /.col -->
+</div><!-- /.row -->
 </header>
 
 <div class="entry-content">
-<%- @content %>
+	<%- @content %>
 </div>
 
 <section>
 	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
-	<div id="related">
-		<h3 class="text-size-12 ahover-111-555">Related Posts</h3>
-		<ul class="mobile-wrap">
+	<div class="related">
+		<h3>Related Posts</h3>
+		<ul>
 			<% for document in @document.relatedDocuments: %>
-				<li><span><%= document.date.toDateString() %></span>
+			<li><span><%= document.date.toDateString() %></span>
 				&raquo;
-				<a href="<%= document.url %>"><%= document.title %></a></li>
+			<a href="<%= document.url %>"><%= document.title %></a></li>
 			<% end %>
 		</ul>
 	</div>
 	<% end %>
 </section>
-
-<!-- Entry : article-footer -->
-<div class="entry-footer">
-
-<!-- Entry : article-footer : actionTrail
-================================================== -->
-<div class="actionTrail">
-<section class="nestedhover-111-555">
-	<p><i class="icon-leaf"></i> closed trackback</a> <span class="cnt">0</span> : <i class="icon-comment"></i> closed comment <span class="cnt"> 0</span> 
-	</p>
-</section>
-</div>
-
-</div>
-

@@ -1,182 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title><%= @document.title %> | <%= @site.title %></title>
-	<meta name="description" content="<%= @getPreparedDescription() %>" />
-	<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
-	<meta name="author" content="<%= @site.author or '' %>" />
-
+	<title><%= @getPreparedTitle() %></title>
+	<meta name="description" content="<%= @getPreparedDescription() %>">
+	<meta name="keywords" content="<%= @getPreparedKeywords() %>">
+	<meta name="author" content="<%= @site.author or '' %>">
 	<%- @getBlock('meta').toHTML() %>
 
-	<link rel="author" href="humans.txt" />
+	<link rel="author" href="humans.txt">
 	<link rel="profile" href="http://microformats.org/profile/hcard">
 	<link rel="alternate" type="application/rss+xml" title="rss" href="<%= @site.xml %>">
 	
-	<!-- Icons -->
-	<link rel="shortcut icon" href="/images/favicon.ico">
+	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57x57-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
 
-	<!-- Shims: IE6-8 support of HTML5 elements, resonsive.js for IE less than 9 -->
-	<!-- resonsive.js for IE less than 9 -->
+	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script async src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="/scripts/respond.min.js"></script>
 	<![endif]-->
-
-	<!-- home style -->
-	<%- @getBlock('styles').add(@site.styles).toHTML() %>
+	
 </head>
-
-<body class="bgmask-hollys bgcolor-eee">
+<body>
 <!--[if lt IE 7]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Nav
-================================================== -->
+<a href="#content" class="skip">skip to content</a>
+
 <nav role="navigation">
-	<div class="navbar navbar-fixed-top bgcolor-fff">
-	<div class="navbar-inner">
- 	<div class="container">
-		<a href="#content" class="skip">skip to content</a>
-		<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
+<div class="navbar navbar-fixed-top">
+	<div class="container skeleton-nav">
+	<div class="row">
+	<div class="col-lg-12 col-sm-12">
+		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
 		</button>
-		<div class="nav-collapse collapse">
-		<ul class="nav">
+			<a class="navbar-brand" href="<%= @site.url %>">HOME</a>
+			<!-- Place everything within .navbar-collapse to hide it until above 768px -->
+			<div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav navbar-nav">
 			<% for document in @getCollection('pages').toJSON(): %>
-				<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
-					<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
-				</li>
-			<% end %>
-			<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown <b class="caret"></b></a>
-			<ul class="dropdown-menu">
-			<li><a href="#">subcategory1</a></li>
-			<li><a href="#">subcategory2</a></li>
-			<li><a href="#">subcategory3</a></li>
-			<li><a href="#">subcategory4</a></li>
-			</ul>
+			<li typeof="sioc:Page" about="<%= document.url %>" class="<%= 'active'  if @document.url is document.url %>">
+			<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 			</li>
-		</ul>
-		</div>
-	</div>
-	</div>
-	</div>
-</nav> 
+			<% end %>
+			</ul>
+			</div><!-- /.nav-collapse -->
+	</div><!-- /.col -->
+	</div><!-- /.row -->
+	</div><!-- /.container -->
+</div><!-- /.navbar -->
+</nav>
 
-<!-- site layout : container --> 
-<div role="document" class="container wrap margin-top-60">
+<div class="clearfix">
+<div class="container skeleton"><!-- site layout : container --> 
 
-<!-- Header 
-================================================== -->
-<header role="banner" class="site-header width-padding-20">
-	<div class="row-fluid h-p-20">
-		<hgroup>
-		<div class="span9">
-		<h1><a href="<%= @site.url %>" title="home"><img class="imghover-373737-4bf" src="/images/markquery-icon-64.png" alt="home" /></a><span class="site-title"><a class="ahover-111-555" href="<%= @site.url %>"><%= @site.title %></a></span></h1>
-		</div>
-		<div class="span3">
-			<h2 class="text-size-10 text-lineheight-20"><span class="site-desc nestedhover-111-555"><i class="icon-cog"></i> <%= @site.description %><br /><i class="icon-home"></i> Home : <%= @site.url %><br /><i class="icon-envelope"></i> <%= @site.email %></span></h2>
-		</div>
-		</hgroup>
-	</div>
+<header role="banner" class="banner">
+<div class="row">
+<div class="col-lg-12 col-sm-12">
+	<hgroup>
+		<h1><a title="home" href="<%= @site.url %>"><%= @site.title %></a></h1>
+		<h2><%= @site.description %></h2>
+	</hgroup>
+</div>
+</div>
 </header>
 
-<!-- site layout : row-fluid -->
-<div class="row-fluid">
-<!-- site layout : span -->
-<div class="span9 border-right-ccc">
-
-<!-- body-min-height, text-lineheight-24, padding 20px, fontsize.js -->
-<div class="body-min-height text-lineheight-24 padding-20 font-resize">
-
-<article role="main" id="content" class="clearfix">
-<div class="hentry">
-<%- @content %>
-</div>
+<main role="main"  id="content">
+<div class="row"><!-- site layout : row -->
+<div class="col-lg-9 col-sm-9 skeleton-content"><!-- site layout : content column -->
+<article role="article" class="hentry">
+	<div id="changeFontFamily" class="font-resize"><!-- font utility -->
+	<%- @content %>
+	</div>
 </article>
+</div><!-- site layout : content /.column -->
 
-</div><!-- body-min-height, text-lineheight-24, padding 20px, fontsize.js -->
-</div><!-- site layout : span -->
 
-<!-- site layout : menu span -->
-<div class="span3">
+<div class="col-lg-3 col-sm-3"><!-- site layout : widget column -->
 <aside role="complementary">
-
-	<menu class="menu margin-right-25">
+      <section class="widget">
+	<div class="widget-inner">
 	<h3>Catetories</h3>
-	<ul class="mobile-wrap">
+	<ul>
 	<% for document in @getCollection('pages').toJSON(): %>
 		<li typeof="sioc:Page" about="<%= document.url %>">
 		<a href="<%= document.url %>" property="dc:title"><%= document.title %></a>
 		</li>
 	<% end %>
 	</ul>
-	</menu>
-
-	<menu class="menu margin-right-25">
+	</div>
+	</section>
+	<section class="widget">
+	<div class="widget-inner">
 	<h3>Recent Articles</h3>
-	</menu>
-	<div class="menu-feed"></div>
-
-	<menu class="menu margin-right-25">
+	</div>
+	<div class="widget-feed"></div>
+	</section>
+	<section class="widget">
+	<div class="widget-inner">
 	<h3>Links</h3>
-	<ul class="mobile-wrap">
+	<ul>
 	<li><a href="http://markquery.github.io">markquery</a></li>
              <li><a href="http://docpad.org">DocPad</a></li>
              <li><a href="http://lesscss.org">less</a></li>
              <li><a href="http://coffeescript.org/">CoffeeScript</a></li>
 	</ul>
-	</menu>
-	
+	</div>
+	</section>
 </aside>
-</div><!-- site layout : menu span3 -->
 
-</div><!-- site layout : row-fluid -->
-</div><!-- site layout : container -->
+</div><!-- site layout : widget /.column -->
+</div><!-- site layout : /.row -->
+</main>
+</div><!-- site layout : /.container -->
+</div><!-- /.clearfix -->
 
-<div class="container wrap-footer margin-bottom-40">
+<div class="container skeleton-footer">
 <%-@partial('footer.html')%>
 </div>
 
-<!--module
-================================================== -->
-<div class="module bgmask-hollys">
-	<ul> 
-	<li><a href="#none">rss</a><div class="rss-feed"></div></li> 
-	<li><a title="pages" href="#none">example 1</a></li>
-	<li><a title="posts" href="#none">example 2</a></li>
-	<li><a title="admin" href="#none">admin</a></li>
-		<li>
-		<div class="fontsize-btn">
-		<span><a id="jfontsize-d" href="#none"><img src="/images/fontsize-d.png" alt="font size reset"></a></span>
-		<span><a id="jfontsize-p" href="#none"><img src="/images/fontsize-plus.png" alt="font size plus"></a></span>
-		<span><a id="jfontsize-m" href="#none"><img src="/images/fontsize-minus.png" alt="font size minus"></a></span>
-		</div>
-		</li>
-	</ul>
-</div>
-
-<a href="#none" class="scrollup">scrollup</a>
+<a href="#" class="scrollup"> Back to Top <span class="glyphicon glyphicon-arrow-up"></span></a>
 
 	<!-- Scripts -->
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 	<!-- jquery -->
 	<script>window.jQuery || document.write('<script src="/scripts/jquery-1.10.1.min.js"><\/script>')</script>
-
+	<script language="JavaScript">function changeFontFamily(fontFam){document.getElementById("changeFontFamily").style.fontFamily=fontFam;}
+	</script>
 </body>
 </html>
