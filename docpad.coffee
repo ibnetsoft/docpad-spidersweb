@@ -39,7 +39,7 @@ docpadConfig = {
 			# The website author's email
 			email: "your@email.com"
 
-			xml : 'http://markquery.github.io/atom.xml'
+			xml : 'http://your-site/atom.xml'
 
 			# Styles
 			styles: [
