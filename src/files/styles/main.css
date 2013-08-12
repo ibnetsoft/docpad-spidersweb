@@ -82,22 +82,24 @@ footer ul li {
   margin: 5px 0;
   font-size:12px;
 }
-.globe-links {
-  margin: 10px 0;
-}
-.globe-links li {
-  display: inline;
-  padding: 0 2px;
-}
-.globe-links li:first-child {
-  padding-left: 0;
-}
-.globe-links a{color:#cfcfd5;text-decoration:none;padding-bottom:2px}.globe-links a:hover,.globe-links a:focus{color:#fff;text-decoration:none;border-bottom:1px solid #fff;padding-bottom:2px}
+
+/* globe link style 
+-------------------------------------------------- */
+.globe-hover-111-555 a{color:#111;text-decoration:none;padding-bottom:2px}.globe-hover-111-555 a:hover,.globe-hover-111-555 a:focus{color:#555;text-decoration:none;border-bottom:1px solid #555;padding-bottom:2px}
+/* license links
+-------------------------------------------------- */
+.license-links { margin: 10px 0; }
+.license-links li { display: inline; padding: 0 2px; }
+.license-links li:first-child { padding-left: 0; }
+.license-links a{color:#cfcfd5;text-decoration:none;padding-bottom:2px}.license-links a:hover,.license-links a:focus{color:#fff;text-decoration:none;border-bottom:1px solid #fff;padding-bottom:2px}
 
 /* content / Posts use the hNews microformat. (http://microformats.org/wiki/hnews)
 -------------------------------------------------- */
-main {border-top: 1px solid #ccc; }
-.hentry { padding-bottom:40px;  border-bottom:1px solid #eee; }
+main { border-top: 1px solid #ccc; }
+.hentry { 
+  padding-bottom:40px;  
+  border-bottom:1px solid #eee; 
+}
 .entry-header {
   margin-bottom:20px;
   padding:10px 0;

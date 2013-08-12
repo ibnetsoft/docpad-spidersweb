@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<title><%= @getPreparedTitle() %></title>
 	<meta name="description" content="<%= @getPreparedDescription() %>">
 	<meta name="keywords" content="<%= @getPreparedKeywords() %>">
@@ -89,7 +88,7 @@
 
 <div class="col-lg-3 col-sm-3"><!-- site layout : widget column -->
 <aside role="complementary">
-      <section class="widget">
+      	<section class="widget">
 	<div class="widget-inner">
 	<h3>Catetories</h3>
 	<ul>
@@ -101,20 +100,22 @@
 	</ul>
 	</div>
 	</section>
+
 	<section class="widget">
 	<div class="widget-inner">
 	<h3>Recent Articles</h3>
 	</div>
 	<div class="widget-feed"></div>
 	</section>
+
 	<section class="widget">
 	<div class="widget-inner">
 	<h3>Links</h3>
 	<ul>
-	<li><a href="http://markquery.github.io">markquery</a></li>
-             <li><a href="http://docpad.org">DocPad</a></li>
-             <li><a href="http://lesscss.org">less</a></li>
-             <li><a href="http://coffeescript.org/">CoffeeScript</a></li>
+	<li><a href="http://markquery.com/" target="_blank">markquery</a></li>
+             <li><a href="http://docpad.org/" target="_blank">DocPad</a></li>
+             <li><a href="http://lesscss.org/" target="_blank">less</a></li>
+             <li><a href="http://coffeescript.org/" target="_blank">CoffeeScript</a></li>
 	</ul>
 	</div>
 	</section>

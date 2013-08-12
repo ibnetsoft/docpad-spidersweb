@@ -4,7 +4,7 @@ title: 'Home'
 ---
 # [Spider's Web v1.0.0](http://markquery.com) 
 
-MARKQUERY Skeleton For DocPad 
+MARKQUERY Skeleton For DocPad with Bootstrap 3
 
 * Home page [http://markquery.com](http://markquery.com)
 * GitHub page: [http://markquery.github.io](http://markquery.github.io)
