@@ -1,11 +1,11 @@
 # [Spider's Web v1.0.0](http://markquery.com) 
 
-MARKQUERY Skeleton For DocPad 
+MARKQUERY Skeleton For DocPad with Bootstrap 3
 
 * Home page [http://markquery.com](http://markquery.com)
-* GitHub page: [http://markquery.github.io/](http://markquery.github.io/)
+* GitHub page: [http://markquery.github.io](http://markquery.github.io)
 
-### Getting Started
+## Getting Started
 
 1. [Install DocPad](https://github.com/bevry/docpad)
 
@@ -25,15 +25,15 @@ MARKQUERY Skeleton For DocPad
 
 You can now download [Customized bootstrap 3](https://github.com/markquery/markquery/archive/master.zip) or [get original twitter bootstrap 3](http://getbootstrap.com/)
 
-### I'm getting EMFILE errors
+## I'm getting EMFILE errors
 
 [See here for the reason why and the solution](http://docpad.org/docs/troubleshoot#i-m-getting-emfile-too-many-open-files)
 
-### Versioning
+## Versioning
 
 `<major>.<minor>.<patch>`
 
-### Skeleton License
+## Skeleton License
 
 This skeleton is made ["public domain"](http://en.wikipedia.org/wiki/Public_domain) using the [Creative Commons Zero](http://creativecommons.org/publicdomain/zero/1.0/), as such before you publish your website you should place your desired license here and within the `LICENSE.md` file.
 

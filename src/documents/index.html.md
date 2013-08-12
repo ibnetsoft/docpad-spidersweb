@@ -7,7 +7,7 @@ title: 'Home'
 MARKQUERY Skeleton For DocPad 
 
 * Home page [http://markquery.com](http://markquery.com)
-* GitHub page: [http://markquery.github.io/](http://markquery.github.io/)
+* GitHub page: [http://markquery.github.io](http://markquery.github.io)
 
 ### Getting Started
 

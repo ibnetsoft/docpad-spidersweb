@@ -28,7 +28,6 @@
 		<script async src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<script src="/scripts/respond.min.js"></script>
 	<![endif]-->
-	
 </head>
 <body>
 <!--[if lt IE 7]>
@@ -137,7 +136,6 @@
 	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
 	<!-- jquery -->
 	<script>window.jQuery || document.write('<script src="/scripts/jquery-1.10.1.min.js"><\/script>')</script>
-	<script language="JavaScript">function changeFontFamily(fontFam){document.getElementById("changeFontFamily").style.fontFamily=fontFam;}
-	</script>
+	<script language="JavaScript">function changeFontFamily(fontFam){document.getElementById("changeFontFamily").style.fontFamily=fontFam;}</script>
 </body>
 </html>

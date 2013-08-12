@@ -26,9 +26,9 @@ $ ->
 			false
 
 	$(".font-resize").jfontsize
-	  btnMinusClasseId: "#jfontsize-m"
-	  btnDefaultClasseId: "#jfontsize-d"
-	  btnPlusClasseId: "#jfontsize-p"
+	  btnMinusClasseId: ".jfontsize-m"
+	  btnDefaultClasseId: ".jfontsize-d"
+	  btnPlusClasseId: ".jfontsize-p"
 
 	jQuery ($) ->
 	  $(".widget-feed").rss "http://markquery.com/feed",

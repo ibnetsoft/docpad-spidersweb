@@ -17,8 +17,8 @@ layout: default
 <div class="col-lg-3 col-sm-3">
 	<div class="responsive-right2left">
 	<div class="btn-group">
-		<button id="jfontsize-p" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
-		<button id="jfontsize-m" type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
+		<button type="button" class="jfontsize-p btn btn-default btn-xs"><span class="glyphicon glyphicon-plus"></span></button>
+		<button type="button" class="jfontsize-m btn btn-default btn-xs"><span class="glyphicon glyphicon-minus"></span></button>
 		<div class="btn-group">
 			<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">FONT <span class="caret"></span></button>
 			<ul class="dropdown-menu">
