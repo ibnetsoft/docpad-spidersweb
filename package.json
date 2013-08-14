@@ -1,13 +1,13 @@
 {
   "name": "docpad-spidersweb",
   "version": "1.0.0",
-  "description": "spider's web - markquery skeleton for docpad ",
+  "description": "markquery skeleton - spider's web for docpad",
   "homepage": "https://github.com/markquery/docpad-spidersweb",
   "keywords": [
-    "markquery-skeleton",
+    "markquery skeleton",
     "docpad",
     "website",
-    "bootstrap3",
+    "bootstrap",
     "contents editorial design"
   ],
   "author": "Ungki, H <ungki.h@gmail.com> (http://markquery.github.io)",
@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "docpad": "6.x",
-    "docpad-plugin-downloader": "2.x",
     "docpad-plugin-cleanurls": "2.x",
     "docpad-plugin-coffeescript": "2.x",
     "docpad-plugin-coffeekup": "~2.1.5",
@@ -39,7 +38,7 @@
     "docpad-plugin-marked": "2.x",
     "docpad-plugin-partials": "2.x",
     "docpad-plugin-related": "2.x",
-    "docpad-plugin-text": "2.x",
+    "docpad-plugin-text": "2.x"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.x"
@@ -47,5 +46,7 @@
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {
     "start": "node_modules/docpad/bin/docpad-server"
-  }
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT"
 }
