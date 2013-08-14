@@ -17,7 +17,7 @@ License:    http://markquery.github.io/license
 body {
   position: relative; /* For scrollyspy */
   padding-top: 50px;  /*Account for fixed navbar */
-  background-color: #eee;
+  background-color: #f8f8f8;
 }
 .skeleton {
   padding: 0 20px;
@@ -27,9 +27,34 @@ body {
 }
 .skeleton-nav {
   padding: 0 20px;
-  border:1px solid #ccc;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  border-bottom:1px solid #ccc;
   background-color:#fff;
   /*box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);*/
+}
+.skeleton-header {
+  margin: 20px 0;
+  padding:40px 0 60px;
+}
+.skeleton-header img {
+  vertical-align: middle;
+}
+.skeleton-header h1 {
+  text-indent: 20px;
+  font-weight: bold;
+}
+.skeleton-header h1 a {
+  color: #111;
+  text-indent: 1em;
+}
+.skeleton-header h1 a:hover {
+  color:#999;
+}
+.skeleton-header h2 {
+  color:#999;
+  font-size: 14px;
+  text-indent: 20px;
 }
 .skeleton-content {
   min-height:1000px;
@@ -41,31 +66,9 @@ body {
   /*box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25);*/
 }
 
-/* header
+/* site header
 -------------------------------------------------- */
-header.banner {
-  margin: 20px 0;
-  padding:40px 0 60px;
-}
-header.banner img {
-  vertical-align: middle;
-}
-header.banner h1 {
-  text-indent: 20px;
-  font-weight: bold;
-}
-header.banner h1 a {
-  color: #111;
-  text-indent: 1em;
-}
-header.banner h1 a:hover {
-  color:#999;
-}
-header.banner h2 {
-  color:#999;
-  font-size: 14px;
-  text-indent: 20px;
-}
+header.banner { }
 
 /* site footer
 -------------------------------------------------- */
@@ -215,13 +218,6 @@ figcaption {
   opacity: 0.7;
   font-size:10px;
 }
-.skip {
-  overflow: hidden;
-  position:absolute;
-  z-index:1020;  
-  width:100%;
-  left:-9999em;   
-}
 .text-justify {
   text-align: justify;
 }
@@ -250,7 +246,7 @@ figcaption {
 @media (max-width: 767px) {
   /* Remove any padding from the body */
   body {
-    padding: 0;
+    padding-top: 0;
   }
   body [class*="padding"] {
     padding: 0;
@@ -261,30 +257,24 @@ figcaption {
   body [class*="height"] {
     height: auto;
   } 
-  nav > .navbar {
-    padding-left: 0;
-    padding-right: 0;
+    .skeleton-header h1, .skeleton-header h2 {
+    text-indent: 0;
   }
   .skeleton, .skeleton-nav, .skeleton-footer {
     padding: 0;
   }
+
   .skeleton-content {
     min-height:200px;
   }
-  header.banner {
+  .skeleton-header {
     padding-bottom:0;
     text-align: center;
   }
-  header.banner h1, header.banner h2 {
-    text-indent: 0;
-  }
+
   footer ul li, footer p {
     font-size:10px;
   }
-  /* utility */
-  .skip {
-    display:none;
-  } 
   .scrollup {
     display:none !important;
   }
