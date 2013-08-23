@@ -257,13 +257,12 @@ figcaption {
   body [class*="height"] {
     height: auto;
   } 
-    .skeleton-header h1, .skeleton-header h2 {
-    text-indent: 0;
+  .skeleton-header h1, .skeleton-header h2 {
+  text-indent: 0;
   }
   .skeleton, .skeleton-nav, .skeleton-footer {
     padding: 0;
   }
-
   .skeleton-content {
     min-height:200px;
   }
@@ -271,7 +270,6 @@ figcaption {
     padding-bottom:0;
     text-align: center;
   }
-
   footer ul li, footer p {
     font-size:10px;
   }
