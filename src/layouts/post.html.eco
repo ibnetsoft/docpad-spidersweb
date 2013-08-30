@@ -35,7 +35,7 @@ layout: default
 				<li><a href="javascript:changeFontFamily('나눔고딕, NanumGothic, sans-serif');">나눔고딕</a></li>
 				<li><a href="javascript:changeFontFamily('다음_Regular, daum_Regular, sans-serif');">다음</a></li>
 				<li class="divider"></li>
-				<li><a href="http://markquery.com/"><small>Web Safe Font</small> <span class="glyphicon glyphicon-question-sign"></span></a></li>
+				<li><a href="http://markquery.com/docs/web-safe-font/" target="_blank"><small>Web Safe Font</small> <span class="glyphicon glyphicon-question-sign"></span></a></li>
 			</ul>
 		</div><!-- /.btn-group -->
 	</div><!-- /.btn-group -->
